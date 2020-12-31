@@ -1,0 +1,268 @@
+$alien-green: #2ECC71;
+$alien-green-hover: #82E0AA;
+$content-section: #17202A;
+$content-page-background: #212F3D;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $content-page-background;
+}
+
+.alien-color-link {
+    color: $alien-green;
+    transition: all 300ms ease-in-out;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.alien-color-link:hover {
+    color: $alien-green-hover;
+    text-decoration: none;
+}
+
+#content-pages-background {   // This is every page except the home page
+    background-color: $content-page-background;
+    height: 100vh;
+    width: auto;
+}
+
+
+/* Navigation Bar **************************************************************************************************************************************************************************************/
+#nav-container {
+    position: absolute;
+    top: 50px;
+    left: 0;   // this and right center the element with a position property set
+    right: 0;
+    z-index: 5;
+}
+
+.nav-link {
+    color: $alien-green;
+    font-size: 1.5rem;
+    transition: all 300ms ease-in-out;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.nav-link:hover {
+    color: $alien-green-hover;
+}
+
+#nav-row {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li .nav-link {
+    text-decoration: none;
+    position: relative;
+} 
+
+@media only screen and (min-width: 992px) {
+    ul li .nav-link::before {
+        content: "";
+        width: 0px;
+        height: 5px;
+        background: $alien-green;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: .5s;
+    }
+    
+    ul li:hover .nav-link::before {
+        width: 50%;
+        transform: translateX(50%);
+    }
+}
+
+
+/* End of Navigation Bar **************************************************************************************************************************************************************************************/
+
+
+/* Home Page **************************************************************************************************************************************************************************************/
+
+// .particles-background-wrapper {
+//     background-image: url("../img/night_sky.jpg");
+//     position: fixed;   // Super important for full background images to have fixed
+//     height: 100vh;
+//     width: 100%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+// }
+
+.particles-background-wrapper {
+    background-color: $content-page-background;
+    height: 100vh;
+    width: auto;
+}
+
+#home-body-container {
+    background-color: $content-section;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    padding: 100px;
+}
+
+
+/* End of Home Page **************************************************************************************************************************************************************************************/
+
+
+/* Projects page  **************************************************************************************************************************************************************************************/
+
+#projects-body-container {
+    background-color: $content-page-background;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+}
+
+#projects-card {
+    background-color: $content-section;
+    box-shadow: 0px 0px 10px 0px inset $alien-green;
+    padding: 30px;
+    min-height: 450px;
+    margin-top: 50px;
+}
+
+#cardHeader {
+    border-bottom: solid 1px $alien-green;
+    font-size: 1.5rem
+}
+
+/* End of Projects page **************************************************************************************************************************************************************************************/
+
+
+/* Typing Test Page **************************************************************************************************************************************************************************************/
+
+#typingTestBody {
+    background-color: $content-section;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+}
+
+.quote-input, .game-container, .quote-display {
+    padding: 10px;
+}
+
+.quote-input {
+    color: white;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    height: 300px;
+}
+
+.quote-input:focus {
+    border-color: $alien-green;
+    box-shadow: 0px 0px 10px 0px inset $alien-green;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+/* End of Typing Test Page **************************************************************************************************************************************************************************************/
+
+
+/* Contact Page **************************************************************************************************************************************************************************************/
+
+#contact-body-container {
+    background-color: $content-section;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    padding: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    #contact-body-container h3 {
+        font-size: 1rem;
+    }
+}
+
+/* End of Contact Page **************************************************************************************************************************************************************************************/
+
+
+/* Resume Page **************************************************************************************************************************************************************************************/
+
+#resume-body-container {
+    background-color: $content-page-background;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+}
+
+.experience-title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $alien-green;
+}
+
+.education-images {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.resume-row-border {
+    border-top: 1px solid $alien-green;
+    border-bottom: 1px solid $alien-green;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    #resumeAboutMe {
+        border-bottom: 1px solid $alien-green;
+        padding-bottom: 40px;
+    }
+}
+
+/* End of Resume Page **************************************************************************************************************************************************************************************/
+
+
+/* Not Found page **************************************************************************************************************************************************************************************/
+
+#not-found {
+    background-color: $content-section;
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    padding: 100px;
+}
+
+/* End of Not Found page **************************************************************************************************************************************************************************************/
+
+
+
+
