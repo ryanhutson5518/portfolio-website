@@ -1,0 +1,49 @@
+$alien-green: #2ECC71;
+
+
+// NOTE = the hover effect might not work due to z-index. So that needs to be configured
+
+
+#alien-button {
+    color: $alien-green;
+    border: 1px solid $alien-green;
+    background: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    transition: .8s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    #alien-button:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #alien-button::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: $alien-green;
+        transition: .8s;
+        z-index: -1;
+    
+        // Top to bottom
+        // top: 0;
+        // border-radius: 0 0 50% 50%;
+    
+        // Bottom to top
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+    }
+    
+    #alien-button:hover::before {   // This is bottom to top ... change height to 0% for top to bottom
+        height: 200%;
+    }
+}
+
